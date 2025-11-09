@@ -1,35 +1,73 @@
-# Hello! I'm Jose Miguel! 👋  
-### Junior Backend Developer | Data Science & Artificial Intelligence Student  
+# Hello! I'm Jose Miguel Alfaro Castillo 👋  
+### Junior Backend Developer | Data Science & AI Engineering Student  
 
 ## 🚀 About Me  
-Hello! I'm a passionate **Full Stack Developer** with a keen focus on **Java** and **Angular**. My journey in the tech world began with a fascination for building solutions that not only perform efficiently but also deliver a compelling user experience.  
+I'm a passionate **Backend Developer** and **AI enthusiast** with a strong foundation in **Java**, **Python**, and **data-driven solutions**. I love building intelligent systems that solve real-world problems and improve user experiences.
 
-Currently, I am pursuing a **double degree program** to become an **“Ingénieur Spécialiste – Responsable Data Science et Intelligence Artificielle”** at **IMT Nord Europe** in **Lille, France** 🇫🇷. This experience is helping me strengthen my technical background in **machine learning, AI systems, and data-driven decision making**, while deepening my understanding of how technology can create real impact.  
+Currently, I'm pursuing a **Double Degree** in **Responsible Artificial Intelligence and Data Science** at **IMT Nord Europe** in Lille, France 🇫🇷, and in **Mechatronics Engineering** at the **National University of Colombia** 🇨🇴. This unique blend allows me to combine technical engineering skills with cutting-edge AI and data science knowledge.
 
-## 🤝 Contact Me  
-As I continue my journey in Full Stack development and Data Science, I am always on the lookout for **collaborative projects** and **opportunities to grow** both personally and professionally.  
-Let’s connect and explore how we can create something amazing together!  
+I'm actively seeking an **internship** where I can apply my skills in **machine learning, data analysis, and software development** to contribute to meaningful projects.
 
-🔗 [LinkedIn – Jose Miguel Alfaro Castillo](https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291)  
+---
 
-## 💻 Technologies  
-- **Back-End:** Proficient in **Java**, with solid experience in server-side development.  
-- **Front-End:** Skilled in **Angular** and **Node.js**, building interactive and user-friendly interfaces.  
-- **Frontend JS + CSS:** Experience developing responsive web pages using **JavaScript** and **CSS**.  
-- **Version Control:** Confident using **Git** and GitHub for collaborative development and project management.  
+## 📚 Education  
+- **IMT Nord Europe** – Engineering Degree, Responsible AI & Data Science  
+  `Sept 2025 – Present`  
+- **National University of Colombia** – Mechatronics Engineering  
+  `Jan 2024 – Present`  
+- **Globant University & Egg Cooperation** – Backend Java Developer Certificate (345h)  
+  `Sept 2024 – Apr 2025` *(Scholarship Awarded)*
 
-## 🌐 Languages  
-- **English:** B2  
-- **French:** B2  
-- **Spanish:** C2 (Native)  
+---
 
-## 🧠 Skills  
-- **Problem-Solving:** I thrive on tackling complex challenges and exploring new technologies.  
-- **Self-Learning:** When I find something I’m passionate about, I dive deep until I master it.  
-- **Assertive Communication:** Emotionally intelligent and focused on teamwork, empathy, and respect.  
-- **Goal-Directed Learning:** I believe the best way to learn is through real projects that push you toward tangible results.  
+## 💼 Professional Experience  
+
+### 💻 Innovation Technology Intern – Davivienda Bank  
+`Feb 2025 – Jul 2025`  
+- Co-developed a conversational agent (LLM) prototype using **Python** and **Angular**.  
+- Presented the project to the innovation vice presidency; approved for **incubation phase** with allocated budget.  
+- Focused on automating customer service and reducing operational workload.
+
+### 🔧 Assistant Technology Development Intern – Dinamizar Soluciones  
+`Jul 2024 – Oct 2024`  
+- Built a **Java application** for Balanced Scorecard calculations.  
+- Analyzed demographic data with **R** to support strategic decision-making.
+
+---
+
+## 🛠️ Technologies & Skills  
+- **Backend:** Java, Python, Node.js  
+- **AI & Data Science:** Scikit-learn, TensorFlow, LLMs, AI Agents, Pandas, NumPy  
+- **Data Engineering:** SQL, Power Query, EDA, Hypothesis Testing  
+- **Frontend:** Angular, JavaScript, CSS  
+- **Tools:** Git, GitHub, Excel, Trello, Agile/Scrum  
+- **Soft Skills:** Leadership, Teamwork, Self-learning, Adaptability, Problem-Solving
+
+---
+
+## 🌍 Languages  
+- **Spanish** – Native (C2)  
+- **French** – B2 (DELF)  
+- **English** – B2
+
+---
+
+## ❤️ Volunteer Work  
+**Linkee** – Fighting food waste and insecurity  
+`Oct 2025 – Present`  
+Logistics and meal distribution.
+
+---
 
 ## ⚡ Hobbies  
-- **Volleyball:** I’ve been coaching at a local club — teamwork fuels my motivation in all areas of life.  
-- **Football:** Playing soccer with my family helps me relax and stay connected with my loved ones.  
-- **Chess:** I’ve been playing for a few years, I'm not a professional player but my elo is 1700 :). 
+- **Volleyball** – Coaching at a local club  
+- **Football** – Playing with family  
+- **Chess** – 1700 Elo player ♟️
+
+---
+
+## 📬 Let's Connect!  
+I'm always open to collaborating on **innovative projects**, **internships**, or just chatting about tech and AI. Let's build something impactful together!
+
+🔗 [LinkedIn – Jose Miguel Alfaro Castillo](https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291)  
+📧 jose.alfaro.castillo@example.com *(reemplaza con tu email real)*
