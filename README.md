@@ -1,8 +1,8 @@
 # Hello! I'm Jose Miguel Alfaro Castillo 👋  
-### Junior Backend Developer | Data Science & AI Engineering Student  
+### Data Science & AI Engineering Student 
 
 ## 🚀 About Me  
-I'm a passionate **Backend Developer** and **AI enthusiast** with a strong foundation in **Java**, **Python**, and **data-driven solutions**. I love building intelligent systems that solve real-world problems and improve user experiences.
+I'm a passionate **AI enthusiast** with a strong foundation in **Java**, **Python**, **Matlab** and **data-driven solutions**. I love building intelligent systems that solve real-world problems and improve user experiences.
 
 Currently, I'm pursuing a **Double Degree** in **Responsible Artificial Intelligence and Data Science** at **IMT Nord Europe** in Lille, France 🇫🇷, and in **Mechatronics Engineering** at the **National University of Colombia** 🇨🇴. This unique blend allows me to combine technical engineering skills with cutting-edge AI and data science knowledge.
 
@@ -36,9 +36,9 @@ I'm actively seeking an **internship** where I can apply my skills in **machine 
 ---
 
 ## 🛠️ Technologies & Skills  
-- **Backend:** Java, Python, Node.js  
-- **AI & Data Science:** Scikit-learn, TensorFlow, LLMs, AI Agents, Pandas, NumPy  
-- **Data Engineering:** SQL, Power Query, EDA, Hypothesis Testing  
+- **AI & Data Science:** Python, Scikit-learn, TensorFlow, LLMs, AI Agents, Pandas, NumPy  
+- **Data Engineering:** SQL, Power Query, EDA, Hypothesis Testing
+- **Backend:** Java, SQL, Spring, MVC, API Rest
 - **Frontend:** Angular, JavaScript, CSS  
 - **Tools:** Git, GitHub, Excel, Trello, Agile/Scrum  
 - **Soft Skills:** Leadership, Teamwork, Self-learning, Adaptability, Problem-Solving
@@ -60,7 +60,7 @@ Logistics and meal distribution.
 ---
 
 ## ⚡ Hobbies  
-- **Volleyball** – Coaching at a local club  
+- **Volleyball** – Playing at a local club  
 - **Football** – Playing with family  
 - **Chess** – 1700 Elo player ♟️
 
@@ -70,4 +70,4 @@ Logistics and meal distribution.
 I'm always open to collaborating on **innovative projects**, **internships**, or just chatting about tech and AI. Let's build something impactful together!
 
 🔗 [LinkedIn – Jose Miguel Alfaro Castillo](https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291)  
-📧 jose.alfaro.castillo@example.com *(reemplaza con tu email real)*
+📧 alfaro.castillo.josemiguel@gmail.com *(reemplaza con tu email real)*
