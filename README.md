@@ -1,6 +1,19 @@
 # Hello! I'm Jose Miguel Alfaro Castillo 👋  
 ### Data Science & AI Engineering Student 
 
+## 🌐 Connect with Me
+[![Website](https://img.shields.io/badge/🌐_My_Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://jmalfaro2019.github.io/jmalfaro2019/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alfaro.castillo.josemiguel@gmail.com)
+
+## 🚀 Featured Projects
+
+### [Image Compression using Machine Learning](https://github.com/jmalfaro2019/image_compressing-ml)
+_Implemented machine learning techniques for image compression, reducing file sizes while maintaining quality._
+
+### [Iris Classification](https://github.com/jmalfaro2019/Iris-classification)
+_A classic machine learning project classifying iris flowers into species using various algorithms._
+
 ## 🚀 About Me  
 I'm a passionate **AI enthusiast** with a strong foundation in **Java**, **Python**, **Matlab** and **data-driven solutions**. I love building intelligent systems that solve real-world problems and improve user experiences.
 
@@ -69,5 +82,4 @@ Logistics and meal distribution.
 ## 📬 Let's Connect!  
 I'm always open to collaborating on **innovative projects**, **internships**, or just chatting about tech and AI. Let's build something impactful together!
 
-🔗 [LinkedIn – Jose Miguel Alfaro Castillo](https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291)  
-📧 alfaro.castillo.josemiguel@gmail.com *(reemplaza con tu email real)*
+⭐ _From [jmalfaro2019](https://github.com/jmalfaro2019)_ 
