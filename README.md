@@ -15,7 +15,10 @@ _Comprehensive project that implements image compression algorithms, handwritten
 _A sippervised learning project classifying iris flowers into species using various algorithms._
 
 ### [Hotel Market Segmentation Analysis](https://github.com/jmalfaro2019/hotels-clustering)
-_An unsupervised learning project that applies advanced clustering techniques to segment hotels based on their services, amenities, and pricing structure, revealing natural groupings beyond traditional star ratings.._
+_An unsupervised learning project that applies advanced clustering techniques to segment hotels based on their services, amenities, and pricing structure, revealing natural groupings beyond traditional star ratings._
+
+### [European Cities Temperature Analysis - PCA Project](https://github.com/jmalfaro2019/temperature-PCA)
+_This project applies Principal Component Analysis (PCA) to monthly temperature data from European cities to identify climate patterns based on geographical location._
 
 ## 🚀 About Me  
 I'm a passionate **AI enthusiast** with a strong foundation in **Java**, **Python**, **Matlab** and **data-driven solutions**. I love building intelligent systems that solve real-world problems and improve user experiences.
