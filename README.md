@@ -8,11 +8,14 @@
 
 ## 🚀 Featured Projects
 
-### [Image Compression using Machine Learning](https://github.com/jmalfaro2019/image_compressing-ml)
-_Implemented machine learning techniques for image compression, reducing file sizes while maintaining quality._
+### [Image Compression and classification system with Machine Learning](https://github.com/jmalfaro2019/image_compressing-ml)
+_Comprehensive project that implements image compression algorithms, handwritten digit classification, and photo mosaic generation using advanced image processing and machine learning techniques.._
 
 ### [Iris Classification](https://github.com/jmalfaro2019/Iris-classification)
-_A classic machine learning project classifying iris flowers into species using various algorithms._
+_A sippervised learning project classifying iris flowers into species using various algorithms._
+
+### [Hotel Market Segmentation Analysis](https://github.com/jmalfaro2019/hotels-clustering)
+_An unsupervised learning project that applies advanced clustering techniques to segment hotels based on their services, amenities, and pricing structure, revealing natural groupings beyond traditional star ratings.._
 
 ## 🚀 About Me  
 I'm a passionate **AI enthusiast** with a strong foundation in **Java**, **Python**, **Matlab** and **data-driven solutions**. I love building intelligent systems that solve real-world problems and improve user experiences.
