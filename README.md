@@ -8,7 +8,7 @@
 
 ## 🚀 Featured Projects
 
-### [Image Compression using Machine Learning](https://github.com/jmalfaro2019/image_compressing-ml)
+### [Image Compression and classification system with Machine Learning](https://github.com/jmalfaro2019/image_compressing-ml)
 _Implemented machine learning techniques for image compression, reducing file sizes while maintaining quality._
 
 ### [Iris Classification](https://github.com/jmalfaro2019/Iris-classification)
