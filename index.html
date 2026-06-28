@@ -3,9 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jose Miguel Alfaro Castillo - Responsible AI Engineer & Data Science Student. Portfolio of projects in machine learning, data analysis, and AI.">
+    <meta name="author" content="Jose Miguel Alfaro Castillo">
     <title>Jose Miguel Alfaro Castillo | Responsible AI Engineer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg" href="Images/Logo.svg">
+
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome (kept for existing project icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Merriweather pair -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet">
+
     <style>
         :root {
             --primary: #2c3e50;
@@ -13,221 +31,162 @@
             --accent: #e74c3c;
             --light: #ecf0f1;
             --dark: #2c3e50;
-            --success: #27ae60;
             --text: #333;
             --text-light: #7f8c8d;
+            --bs-primary: #3498db;
+            --bs-primary-rgb: 52, 152, 219;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Merriweather', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text);
             background-color: #f9f9f9;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: cover;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid white;
-            border-radius: 50%;
-            /* Recorte circular */
-            overflow: hidden;
-            /* Oculta el exceso de imagen */
-            transform: scale(1.5);
-            /* 1.5 veces más grande */
-            margin: 0 auto 1.5rem;
-            background: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
-        }
-
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Mantiene el recorte bien centrado */
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather Sans', sans-serif;
             font-weight: 700;
         }
 
-        .subtitle {
-            font-size: 1.4rem;
+        .btn-primary {
+            --bs-btn-bg: var(--secondary);
+            --bs-btn-border-color: var(--secondary);
+            --bs-btn-hover-bg: #2980b9;
+            --bs-btn-hover-border-color: #2980b9;
+            --bs-btn-active-bg: #2980b9;
+            --bs-btn-active-border-color: #2980b9;
+        }
+
+        /* Navbar */
+        #mainNav {
+            background-color: transparent;
+            transition: background-color 0.35s ease, padding 0.35s ease;
+            padding: 1rem 0;
+        }
+        #mainNav.navbar-shrink {
+            background-color: var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            padding: 0.5rem 0;
+        }
+        #mainNav .navbar-brand,
+        #mainNav .nav-link {
+            color: white;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 700;
+        }
+        #mainNav .nav-link {
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s ease;
+        }
+        #mainNav .nav-link:hover { color: var(--secondary); }
+        #mainNav .navbar-brand { font-size: 1.25rem; }
+        #mainNav .navbar-toggler { color: white; border-color: rgba(255,255,255,0.5); }
+        #mainNav .navbar-toggler-icon { filter: invert(1); }
+
+        /* Masthead */
+        .masthead {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(44,62,80,0.75), rgba(44,62,80,0.75)),
+                        url('Images/Foto lago.jpg') center center / cover no-repeat fixed;
+        }
+        .masthead h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.5rem;
+        }
+        .masthead .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-family: 'Merriweather', serif;
+            font-weight: 300;
+            font-style: italic;
             margin-bottom: 2rem;
             opacity: 0.9;
-            font-weight: 300;
         }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
+        .masthead .divider {
+            max-width: 3.25rem;
+            border-width: 0.125rem;
+            border-color: var(--secondary);
+            margin: 1.5rem auto;
         }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.8rem;
-            background: var(--secondary);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            background: #2980b9;
-        }
-
-        .btn-outline {
-            background: transparent;
+        .masthead .btn-group { gap: 1rem; }
+        .masthead .btn-outline-light {
             border: 2px solid white;
+            color: white;
+            background: transparent;
         }
-
-        .btn-outline:hover {
+        .masthead .btn-outline-light:hover {
             background: white;
             color: var(--primary);
         }
 
-        /* Sections */
-        section {
-            padding: 5rem 0;
+        /* Section dividers */
+        .section-divider {
+            max-width: 3.25rem;
+            border-width: 0.125rem;
+            border-color: var(--secondary);
+            margin: 1.5rem auto;
+            opacity: 1;
         }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        .section-light {
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
+        .section-light { background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
 
         /* About */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+        .about-section { padding: 5rem 0; }
+        .profile-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 2rem;
+            border: 6px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
+        .skill-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
+            height: 100%;
         }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
+        .skill-card:hover { transform: translateY(-5px); }
+        .skill-card h3 {
             color: var(--primary);
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.25rem;
         }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
+        .skill-card ul { list-style: none; padding: 0; }
+        .skill-card li {
             padding: 0.5rem 0;
             border-bottom: 1px solid #eee;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+        .skill-card li:last-child { border-bottom: none; }
+        .skill-card li i { color: var(--secondary); }
 
-        .skill-category li:last-child {
-            border-bottom: none;
-        }
-
-        .skill-category li i {
-            color: var(--secondary);
-        }
-
-        /* Experience - FIXED TIMELINE */
+        /* Experience timeline */
         .timeline {
             max-width: 900px;
             margin: 0 auto;
             position: relative;
         }
-
         .timeline::before {
             content: '';
             position: absolute;
@@ -238,25 +197,21 @@
             background: var(--secondary);
             transform: translateX(-50%);
         }
-
         .timeline-item {
             display: flex;
             margin-bottom: 3rem;
             position: relative;
         }
-
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
+        .timeline-item:nth-child(odd) { flex-direction: row-reverse; }
         .timeline-content {
             width: 42%;
             padding: 1.5rem;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
         }
-
+        .timeline-content h3 { color: var(--primary); font-size: 1.1rem; }
+        .timeline-content strong { color: var(--secondary); }
         .timeline-date {
             position: absolute;
             top: 1.5rem;
@@ -267,149 +222,105 @@
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-weight: 600;
+            font-size: 0.85rem;
             z-index: 1;
             white-space: nowrap;
         }
 
-        .timeline-item:nth-child(odd) .timeline-date {
-            left: 50%;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
+        /* Portfolio */
+        .portfolio-item {
+            position: relative;
+            display: block;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            background: white;
             transition: transform 0.3s ease;
         }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-img {
-            height: 200px;
-            background: var(--light);
+        .portfolio-item:hover { transform: translateY(-5px); }
+        .portfolio-img-wrap {
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
+            font-size: 4rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
         }
-
-        .project-content {
+        .portfolio-caption {
+            position: absolute;
+            inset: 0;
+            background: rgba(44,62,80,0.85);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.35s ease;
         }
-
-        .project-content h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .project-content p {
-            margin-bottom: 1rem;
-            color: var(--text-light);
-        }
-
-        .project-tags {
+        .portfolio-item:hover .portfolio-caption { opacity: 1; }
+        .portfolio-caption h4 { margin-bottom: 0.5rem; }
+        .portfolio-caption .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
+            gap: 0.4rem;
+            justify-content: center;
         }
-
-        .tag {
-            background: var(--light);
-            padding: 0.3rem 0.8rem;
+        .portfolio-caption .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.25rem 0.7rem;
             border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--primary);
+            font-size: 0.75rem;
         }
+        .portfolio-caption .view-link {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .portfolio-caption .view-link i { margin-left: 0.3rem; }
 
         /* Education */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
         .education-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
         }
-
-        .education-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .education-meta {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
+        .education-card h3 { color: var(--primary); }
+        .education-meta { color: var(--text-light); font-style: italic; margin-bottom: 1rem; }
 
         /* Languages */
-        .languages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
         .language-card {
             background: white;
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
             text-align: center;
         }
-
-        .language-card i {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        .language-level {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
+        .language-card i { font-size: 2rem; color: var(--secondary); margin-bottom: 1rem; }
+        .language-level { color: var(--text-light); font-size: 0.9rem; }
 
         /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-info {
+        .contact-info-sidebar {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
         }
-
-        .contact-item {
+        .contact-info-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-
-        .contact-item i {
+        .contact-info-item i {
             width: 40px;
             height: 40px;
             background: var(--secondary);
@@ -418,207 +329,167 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.1rem;
         }
+        .contact-sidebar-links { margin-top: 1.5rem; }
 
         /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
+        footer { background: var(--dark); color: white; padding: 3rem 0; text-align: center; }
+        .footer-social a {
             color: white;
             font-size: 1.5rem;
+            margin: 0 0.5rem;
             transition: color 0.3s ease;
         }
-
-        .social-links a:hover {
-            color: var(--secondary);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .btn-group {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-
-            section {
-                padding: 3rem 0;
-            }
-
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                flex-direction: row !important;
-            }
-
-            .timeline-content {
-                width: calc(100% - 80px);
-                margin-left: 80px;
-            }
-
-            .timeline-date {
-                left: 30px;
-                transform: translateX(0);
-            }
-        }
+        .footer-social a:hover { color: var(--secondary); }
 
         /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 0.8s ease forwards; }
+        .fade-in-initial { opacity: 0; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Responsive timeline */
+        @media (max-width: 768px) {
+            .timeline::before { left: 30px; }
+            .timeline-item { flex-direction: row !important; }
+            .timeline-content { width: calc(100% - 80px); margin-left: 80px; }
+            .timeline-date { left: 30px; transform: translateX(0); }
+            .masthead { background-attachment: scroll; }
         }
 
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        .delay-1 {
-            animation-delay: 0.2s;
-        }
-
-        .delay-2 {
-            animation-delay: 0.4s;
-        }
-
-        .delay-3 {
-            animation-delay: 0.6s;
-        }
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 70px; }
     </style>
-    <link rel="icon" type="image/svg" href="Images/Logo.svg">
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <img src="Images/Foto lago.jpg" alt="Jose Miguel Alfaro Castillo"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <h1>Jose Miguel Alfaro Castillo</h1>
-                <p class="subtitle">Responsible AI Engineer | Double Degree IMT Nord Europe - UNAL</p>
-                <div class="btn-group">
-                    <a href="#projects" class="btn">
-                        <i class="fas fa-project-diagram"></i> View Projects
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Contact Me
-                    </a>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">Jose Miguel Alfaro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1>Jose Miguel Alfaro Castillo</h1>
+                    <hr class="divider">
+                    <p class="subtitle">Responsible AI Engineer | Double Degree IMT Nord Europe - UNAL</p>
+                    <div class="btn-group d-flex justify-content-center flex-wrap">
+                        <a href="#portfolio" class="btn btn-primary btn-xl px-4 py-2">
+                            <i class="fas fa-project-diagram me-1"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-xl px-4 py-2">
+                            <i class="fas fa-envelope me-1"></i> Contact Me
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- About -->
-    <section id="about" class="section-light">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content fade-in delay-1">
-                <p>Double degree student between <strong>IMT Nord Europe</strong> (France) and the <strong>National
-                        University of Colombia</strong>, with over 4 years of engineering education. My specialization
-                    focuses on <strong>Responsible Artificial Intelligence and Data Science</strong>, combining solid
-                    technical foundations with an ethical approach to developing technological solutions.</p>
-                <p>I have experience in developing <strong>conversational agents (LLMs)</strong> and <strong>data
-                        analysis</strong>, having worked on projects ranging from banking innovation prototypes to
-                    strategic analysis applications. My goal is to create innovative technical solutions with real,
-                    measurable impact.</p>
+    <section id="about" class="about-section section-light">
+        <div class="container px-4 px-lg-5">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <div class="profile-circle">
+                        <img src="Images/Foto lago.jpg" alt="Jose Miguel Alfaro Castillo">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-4">About Me</h2>
+                    <p>Double degree student between <strong>IMT Nord Europe</strong> (France) and the
+                        <strong>National University of Colombia</strong>, with over 4 years of engineering education.
+                        My specialization focuses on <strong>Responsible Artificial Intelligence and Data Science</strong>,
+                        combining solid technical foundations with an ethical approach to developing technological solutions.</p>
+                    <p>I have experience in developing <strong>conversational agents (LLMs)</strong> and
+                        <strong>data analysis</strong>, having worked on projects ranging from banking innovation prototypes
+                        to strategic analysis applications. My goal is to create innovative technical solutions with real,
+                        measurable impact.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Technical Skills</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Python (Advanced)</li>
-                        <li><i class="fas fa-check"></i> Java (Advanced)</li>
-                        <li><i class="fas fa-check"></i> SQL (Intermediate)</li>
-                        <li><i class="fas fa-check"></i> R (Intermediate)</li>
-
-                    </ul>
+    <section id="skills" class="py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-4">Technical Skills</h2>
+            <hr class="section-divider">
+            <div class="row g-4 mt-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code me-2"></i>Programming Languages</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Python (Advanced)</li>
+                            <li><i class="fas fa-check"></i> Java (Advanced)</li>
+                            <li><i class="fas fa-check"></i> SQL (Intermediate)</li>
+                            <li><i class="fas fa-check"></i> R (Intermediate)</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="skill-category fade-in delay-1">
-                    <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Scikit-learn</li>
-                        <li><i class="fas fa-check"></i> TensorFlow</li>
-                        <li><i class="fas fa-check"></i> LLMs (Large Language Models)</li>
-                        <li><i class="fas fa-check"></i> AI Agents</li>
-                        <li><i class="fas fa-check"></i> Image Processing</li>
-                    </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-brain me-2"></i>Machine Learning &amp; AI</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Scikit-learn</li>
+                            <li><i class="fas fa-check"></i> TensorFlow</li>
+                            <li><i class="fas fa-check"></i> LLMs (Large Language Models)</li>
+                            <li><i class="fas fa-check"></i> AI Agents</li>
+                            <li><i class="fas fa-check"></i> Image Processing</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="skill-category fade-in delay-2">
-                    <h3><i class="fas fa-chart-bar"></i> Analysis & Tools</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Pandas & NumPy</li>
-                        <li><i class="fas fa-check"></i> Power Query</li>
-                        <li><i class="fas fa-check"></i> Git & GitHub</li>
-                        <li><i class="fas fa-check"></i> Advanced Excel</li>
-                        <li><i class="fas fa-check"></i> Agile Methodologies (Scrum)</li>
-                    </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chart-bar me-2"></i>Analysis &amp; Tools</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pandas &amp; NumPy</li>
+                            <li><i class="fas fa-check"></i> Power Query</li>
+                            <li><i class="fas fa-check"></i> Git &amp; GitHub</li>
+                            <li><i class="fas fa-check"></i> Advanced Excel</li>
+                            <li><i class="fas fa-check"></i> Agile Methodologies (Scrum)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Experience -->
-    <section id="experience" class="section-light">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Professional Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
+    <!-- Experience -->
+    <section id="experience" class="section-light py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-4">Professional Experience</h2>
+            <hr class="section-divider">
+            <div class="timeline mt-4">
+                <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Davivienda Bank - Bolívar Group</h3>
+                        <h3>Davivienda Bank - Bol&iacute;var Group</h3>
                         <p><strong>Innovation Technology Intern</strong></p>
                         <ul>
                             <li>Co-led the development of a conversational agent (LLM) prototype using Python for
@@ -629,7 +500,7 @@
                     </div>
                     <div class="timeline-date">Feb 2025 - Jul 2025</div>
                 </div>
-                <div class="timeline-item fade-in delay-1">
+                <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>Dinamizar Soluciones</h3>
                         <p><strong>Assistant Technology Development Intern</strong></p>
@@ -645,250 +516,302 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Featured Projects</h2>
-            </div>
-            <div class="projects-grid">
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-4">Featured Projects</h2>
+            <hr class="section-divider">
+            <div class="row g-4 mt-3">
+
                 <!-- Project 1 -->
-                <div class="project-card fade-in">
-                    <div class="project-img">
-                        <i class="fas fa-compress-arrows-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Image Compression with DCT</h3>
-                        <p>Custom compression algorithm that outperforms JPEG standard in certain scenarios, implemented
-                            from scratch with Python.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">DCT</span>
-                            <span class="tag">Image Processing</span>
-                            <span class="tag">Algorithms</span>
+                <div class="col-lg-6 col-md-6">
+                    <a class="portfolio-item" href="https://jmalfaro2019.github.io/image_compressing-ml/" target="_blank" rel="noopener">
+                        <div class="portfolio-img-wrap">
+                            <i class="fas fa-compress-arrows-alt"></i>
                         </div>
-                        <a href="https://jmalfaro2019.github.io/image_compressing-ml/" class="btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
-                    </div>
+                        <div class="portfolio-caption">
+                            <h4>Image Compression with DCT</h4>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">DCT</span>
+                                <span class="tag">Image Processing</span>
+                                <span class="tag">Algorithms</span>
+                            </div>
+                            <div class="view-link">View Project <i class="fas fa-external-link-alt"></i></div>
+                        </div>
+                    </a>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card fade-in delay-1">
-                    <div class="project-img">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Iris Species Classification</h3>
-                        <p>Comparison of multiple ML algorithms for species classification with 98% accuracy using LDA.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Classification</span>
-                            <span class="tag">Cross-Validation</span>
+                <div class="col-lg-6 col-md-6">
+                    <a class="portfolio-item" href="https://jmalfaro2019.github.io/Iris-classification/" target="_blank" rel="noopener">
+                        <div class="portfolio-img-wrap">
+                            <i class="fas fa-seedling"></i>
                         </div>
-                        <a href="https://jmalfaro2019.github.io/Iris-classification/" class="btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
-                    </div>
+                        <div class="portfolio-caption">
+                            <h4>Iris Species Classification</h4>
+                            <div class="tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">Classification</span>
+                                <span class="tag">Cross-Validation</span>
+                            </div>
+                            <div class="view-link">View Project <i class="fas fa-external-link-alt"></i></div>
+                        </div>
+                    </a>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card fade-in delay-2">
-                    <div class="project-img">
-                        <i class="fas fa-hotel"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Hotels Clustering Analysis</h3>
-                        <p>Unsupervised learning analysis of hotel data using K-Means clustering to identify customer
-                            segments and optimize business strategies.</p>
-                        <div class="project-tags">
-                            <span class="tag">Clustering</span>
-                            <span class="tag">K-Means</span>
-                            <span class="tag">Unsupervised Learning</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Python</span>
+                <div class="col-lg-6 col-md-6">
+                    <a class="portfolio-item" href="https://jmalfaro2019.github.io/hotels-clustering/" target="_blank" rel="noopener">
+                        <div class="portfolio-img-wrap">
+                            <i class="fas fa-hotel"></i>
                         </div>
-                        <a href="https://jmalfaro2019.github.io/hotels-clustering/" class="btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
-                    </div>
-                </div>
-                <!-- Project: European Temperature Analysis with PCA -->
-                <div class="project-card fade-in">
-                    <div class="project-img">
-                        <i class="fas fa-thermometer-half"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>European Temperature Analysis with PCA</h3>
-                        <p>Climate classification of European cities using Principal Component Analysis, reducing 16
-                            dimensions to 2 while preserving 93.9% of variance.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PCA</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Visualization</span>
-                            <span class="tag">sklearn</span>
-                            <span class="tag">matplotlib</span>
+                        <div class="portfolio-caption">
+                            <h4>Hotels Clustering Analysis</h4>
+                            <div class="tags">
+                                <span class="tag">Clustering</span>
+                                <span class="tag">K-Means</span>
+                                <span class="tag">Unsupervised Learning</span>
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <div class="view-link">View Project <i class="fas fa-external-link-alt"></i></div>
                         </div>
-                        <a href="https://jmalfaro2019.github.io/temperature-PCA/" class="btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> View Project
-                        </a>
-                    </div>
+                    </a>
                 </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-6 col-md-6">
+                    <a class="portfolio-item" href="https://jmalfaro2019.github.io/temperature-PCA/" target="_blank" rel="noopener">
+                        <div class="portfolio-img-wrap">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="portfolio-caption">
+                            <h4>European Temperature Analysis with PCA</h4>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">PCA</span>
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">sklearn</span>
+                                <span class="tag">matplotlib</span>
+                            </div>
+                            <div class="view-link">View Project <i class="fas fa-external-link-alt"></i></div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Education -->
-    <section id="education" class="section-light">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Education</h2>
-            </div>
-            <div class="education-grid">
-                <div class="education-card fade-in">
-                    <h3>IMT Nord Europe</h3>
-                    <p class="education-meta">Lille, France | 2025 - Present</p>
-                    <p>Engineering in Responsible Artificial Intelligence and Data Science</p>
-                    <p>Specialization in ML algorithms, signal processing and data analysis with ethical focus.</p>
+    <section id="education" class="section-light py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-4">Education</h2>
+            <hr class="section-divider">
+            <div class="row g-4 mt-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="education-card">
+                        <h3>IMT Nord Europe</h3>
+                        <p class="education-meta">Lille, France | 2025 - Present</p>
+                        <p>Engineering in Responsible Artificial Intelligence and Data Science</p>
+                        <p>Specialization in ML algorithms, signal processing and data analysis with ethical focus.</p>
+                    </div>
                 </div>
-                <div class="education-card fade-in delay-1">
-                    <h3>National University of Colombia</h3>
-                    <p class="education-meta">Bogotá, Colombia | 2020 - Present</p>
-                    <p>Mechatronics Engineering</p>
-                    <p>Comprehensive engineering education with focus on automated systems and emerging technologies.
-                    </p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="education-card">
+                        <h3>National University of Colombia</h3>
+                        <p class="education-meta">Bogot&aacute;, Colombia | 2020 - Present</p>
+                        <p>Mechatronics Engineering</p>
+                        <p>Comprehensive engineering education with focus on automated systems and emerging technologies.</p>
+                    </div>
                 </div>
-                <div class="education-card fade-in delay-2">
-                    <h3>Globant University & Egg Cooperation</h3>
-                    <p class="education-meta">Online Program | 2024 - 2025</p>
-                    <p>Backend Java Developer (Certificate, 345 hours)</p>
-                    <p>Scholarship awarded for specialized program in backend development with Java and associated
-                        technologies.</p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="education-card">
+                        <h3>Globant University &amp; Egg Cooperation</h3>
+                        <p class="education-meta">Online Program | 2024 - 2025</p>
+                        <p>Backend Java Developer (Certificate, 345 hours)</p>
+                        <p>Scholarship awarded for specialized program in backend development with Java and associated technologies.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Languages -->
-    <section id="languages">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Languages</h2>
-            </div>
-            <div class="languages-grid">
-                <div class="language-card fade-in">
-                    <i class="fas fa-language"></i>
-                    <h3>Spanish</h3>
-                    <p class="language-level">Native</p>
+    <section id="languages" class="py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-4">Languages</h2>
+            <hr class="section-divider">
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="language-card">
+                        <i class="fas fa-language"></i>
+                        <h3>Spanish</h3>
+                        <p class="language-level">Native</p>
+                    </div>
                 </div>
-                <div class="language-card fade-in delay-1">
-                    <i class="fas fa-language"></i>
-                    <h3>French</h3>
-                    <p class="language-level">B2 DELF</p>
+                <div class="col-md-4">
+                    <div class="language-card">
+                        <i class="fas fa-language"></i>
+                        <h3>French</h3>
+                        <p class="language-level">B2 DELF</p>
+                    </div>
                 </div>
-                <div class="language-card fade-in delay-2">
-                    <i class="fas fa-language"></i>
-                    <h3>English</h3>
-                    <p class="language-level">B2</p>
+                <div class="col-md-4">
+                    <div class="language-card">
+                        <i class="fas fa-language"></i>
+                        <h3>English</h3>
+                        <p class="language-level">B2</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section-light">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Contact</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>alfaro.castillo.josemiguel@gmail.com</p>
+    <section id="contact" class="section-light py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-4">Contact</h2>
+            <hr class="section-divider">
+            <div class="row g-4 mt-3 justify-content-center">
+
+                <!-- Mailto form -->
+                <div class="col-lg-7">
+                    <h3 class="h5 mb-3">Send a message</h3>
+                    <form action="mailto:alfaro.castillo.josemiguel@gmail.com" method="post" enctype="text/plain">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control form-control-lg" id="name" name="Name" placeholder="Your name" autocomplete="name" required>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Lille, France</p>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-lg" id="email" name="Email" placeholder="your.email@example.com" autocomplete="email" required>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-globe"></i>
-                        <div>
-                            <h3>Availability</h3>
-                            <p>Open to collaboration opportunities</p>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control form-control-lg" id="message" name="Message" rows="4" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg px-4">
+                            <i class="fas fa-paper-plane me-1"></i> Send Email
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact sidebar -->
+                <div class="col-lg-5">
+                    <div class="contact-info-sidebar">
+                        <h3>Interested in collaborating?</h3>
+                        <p class="text-muted">I'm always open to discussing new opportunities, research projects, or collaborations in the field of responsible artificial intelligence and data science.</p>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:alfaro.castillo.josemiguel@gmail.com" class="text-decoration-none">alfaro.castillo.josemiguel@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong><br>
+                                Lille, France
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>Availability</strong><br>
+                                Open to collaboration opportunities
+                            </div>
+                        </div>
+                        <div class="contact-sidebar-links">
+                            <a href="https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291" target="_blank" rel="noopener" class="btn btn-primary me-2 mb-2">
+                                <i class="fab fa-linkedin me-1"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/jmalfaro2019" target="_blank" rel="noopener" class="btn btn-outline-dark mb-2">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-info fade-in delay-1">
-                    <h3>Interested in collaborating?</h3>
-                    <p>I'm always open to discussing new opportunities, research projects, or collaborations in the
-                        field of responsible artificial intelligence and data science.</p>
-                    <div class="btn-group" style="justify-content: start; margin-top: 1.5rem;">
-                        <a href="mailto:alfaro.castillo.josemiguel@gmail.com" class="btn">
-                            <i class="fas fa-paper-plane"></i> Send Email
-                        </a>
-                        <a href="https://www.linkedin.com/in/jose-alfaro-334327291" class="btn btn-outline"
-                            target="_blank" style="color: var(--primary); border-color: var(--primary);">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>Let's Connect</h3>
-                <p>Follow me on my professional networks to stay updated on my latest projects.</p>
-                <div class="social-links">
-                    <a href="https://github.com/jmalfaro2019" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/jose-alfaro-334327291" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="mailto:alfaro.castillo.josemiguel@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-                <p>&copy; 2024 Jose Miguel Alfaro Castillo. All rights reserved.</p>
+        <div class="container px-4 px-lg-5">
+            <h3>Let's Connect</h3>
+            <p>Follow me on my professional networks to stay updated on my latest projects.</p>
+            <div class="footer-social">
+                <a href="https://github.com/jmalfaro2019" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jose-miguel-alfaro-castillo-334327291" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:alfaro.castillo.josemiguel@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
+            <p class="mt-3 mb-0">&copy; 2024 Jose Miguel Alfaro Castillo. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
     <script>
-        // Simple animation on scroll
         document.addEventListener('DOMContentLoaded', function () {
-            const fadeElements = document.querySelectorAll('.fade-in');
+            // Navbar shrink on scroll
+            var navbarShrink = function () {
+                var navbar = document.querySelector('#mainNav');
+                if (!navbar) return;
+                if (window.scrollY === 0) {
+                    navbar.classList.remove('navbar-shrink');
+                } else {
+                    navbar.classList.add('navbar-shrink');
+                }
+            };
+            navbarShrink();
+            document.addEventListener('scroll', navbarShrink);
 
-            const fadeInOnScroll = function () {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
+            // ScrollSpy
+            var mainNav = document.querySelector('#mainNav');
+            if (mainNav) {
+                new bootstrap.ScrollSpy(document.body, {
+                    target: '#mainNav',
+                    rootMargin: '0px 0px -40%'
+                });
+            }
 
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.style.opacity = "1";
-                        element.style.transform = "translateY(0)";
+            // Auto-collapse mobile navbar on link click
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var responsiveNavLinks = document.querySelectorAll('#navbarResponsive .nav-link');
+            responsiveNavLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
+
+            // Fade-in on scroll
+            var fadeElements = document.querySelectorAll('.fade-in');
+            var fadeInOnScroll = function () {
+                fadeElements.forEach(function (el) {
+                    var elementTop = el.getBoundingClientRect().top;
+                    if (elementTop < window.innerHeight - 150) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
                     }
                 });
             };
-
-            // Set initial state
-            fadeElements.forEach(element => {
-                element.style.opacity = "0";
-                element.style.transform = "translateY(20px)";
-                element.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+            fadeElements.forEach(function (el) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
             });
-
             window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll(); // Check on load
+            fadeInOnScroll();
         });
     </script>
 </body>
